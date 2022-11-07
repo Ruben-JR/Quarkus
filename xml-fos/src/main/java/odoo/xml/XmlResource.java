@@ -20,7 +20,7 @@ public class XmlResource {
     @POST
     @Transactional
     public void novoXml() {
-        Xml xml = new Xml();
+         Xml xml = new Xml();
         xml.name = "Fos";
         xml.description = "Folha de ordenado e salario";
         xml.persist();
