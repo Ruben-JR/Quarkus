@@ -18,10 +18,10 @@ public final class XmlService {
     }
 
     @Transactional
-    public void novoXml() {
+    public void novoXml(InserirXmlDTO inserirXmlDTO) {
         Xml xml = new Xml();
-        xml.name = "Fos";
-        xml.description = "Folha de ordenado e salario";
+        xml.name = inserirXmlDTO.getName();
+        xml.description = inserirXmlDTO.getDescription();
         xml.persist();
     }
 }

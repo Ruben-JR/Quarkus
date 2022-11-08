@@ -2,7 +2,7 @@ package odoo.xml;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -11,24 +11,17 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/xml")
 public class XmlResource {
+    @Inject
+    XmlService xmlService;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Xml> list() {
-        return Xml.listAll();
+        return xmlService.list();
     }
 
     @POST
-    @Transactional
-    public void novoXml() {
-         Xml xml = new Xml();
-        xml.name = "Fos";
-        xml.description = "Folha de ordenado e salario";
-        xml.persist();
+    public void novoXml(InserirXmlDTO inserirXmlDTO) {
+        xmlService.novoXml(inserirXmlDTO);
     }
-
-    // @DELETE
-    // public Set<Xml> delete(Xml xml) {
-    //     xmls.removeIf(existingFruit -> existingFruit.name.contentEquals(xml.name));
-    //     return xmls;
-    // }
 }
