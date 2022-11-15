@@ -21,7 +21,7 @@ public final class XmlService {
     public void novoXml(InserirXmlDTO inserirXmlDTO) {
         Xml xml = new Xml();
         xml.name = inserirXmlDTO.getName();
-        xml.description = inserirXmlDTO.getDescription();
+        xml.xml = inserirXmlDTO.getXml();
         xml.persist();
     }
 }

@@ -2,7 +2,7 @@ package odoo.xml;
 
 public class InserirXmlDTO {
     private String name;
-    private String description;
+    private String xml;
 
     public String getName() {
         return name;
@@ -12,11 +12,11 @@ public class InserirXmlDTO {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getXml() {
+        return xml;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setXml(String xml) {
+        this.xml = xml;
     }
 }
