@@ -20,6 +20,7 @@ public final class XmlService {
     @Transactional
     public void novoXml(InserirXmlDTO inserirXmlDTO) {
         Xml xml = new Xml();
+        xml.number = inserirXmlDTO.getNumber();
         xml.name = inserirXmlDTO.getName();
         xml.xml = inserirXmlDTO.getXml();
         xml.persist();

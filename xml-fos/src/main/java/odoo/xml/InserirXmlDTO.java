@@ -1,8 +1,17 @@
 package odoo.xml;
 
 public class InserirXmlDTO {
+    private Integer number;
     private String name;
     private String xml;
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
 
     public String getName() {
         return name;

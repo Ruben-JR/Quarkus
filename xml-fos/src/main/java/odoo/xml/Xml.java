@@ -6,6 +6,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 @Entity
 public class Xml extends PanacheEntity{
+    public Integer number;
     public String name;
     public String xml;
 
@@ -13,7 +14,8 @@ public class Xml extends PanacheEntity{
 
     }
 
-    public Xml(String name, String xml) {
+    public Xml(Integer number, String name, String xml) {
+        this.number = number;
         this.name = name;
         this.xml = xml;
     }
