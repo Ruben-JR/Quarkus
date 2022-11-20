@@ -17,13 +17,13 @@ public class XmlResource {
     XmlService xmlService;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     public List<Xml> list() {
         return xmlService.list();
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_XML)
     public void novoXml(InserirXmlDTO inserirXmlDTO) {
         xmlService.novoXml(inserirXmlDTO);
     }
